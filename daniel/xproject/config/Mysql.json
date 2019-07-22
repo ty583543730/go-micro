@@ -1,0 +1,10 @@
+{
+  "consul": {
+    "host": "192.168.0.30:8500"
+  },
+  "mysql": {
+    "xproject": "xuser:xpass611@tcp(rdsqafzen2y2i7f278.mysql.rds.aliyuncs.com:3306)/xproject?charset=utf8",
+    "renewal": "xuser:xpass611@tcp(rdsqafzen2y2i7f278.mysql.rds.aliyuncs.com:3306)/renewal?charset=utf8",
+    "deal": "xuser:xpass611@tcp(rdsqafzen2y2i7f278.mysql.rds.aliyuncs.com:3306)/deal?charset=utf8"
+  }
+}

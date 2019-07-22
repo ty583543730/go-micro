@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package daniel.xproject.proto.renewal;
+
+message RequestHeader {
+    string chn = 1;
+    string source = 2;
+    string partnerId = 3;
+    string clientType = 4;
+}
+
+message ResponseHeader {
+    uint32 errNo = 1;
+    string errMsg = 2;
+}
+
+message RenewalDealInfo{
+    uint64 deal_id = 1;
+    uint64 bdeal_id = 2;
+    string disdeal_id = 3;
+    uint32 deal_type = 4;
+
+    uint64 insurance_id = 5;
+    uint64 group_id = 6;
+    uint64 product_id = 7;
+    string product_title = 8;
+    uint64 uid = 9;
+    uint64 cps_agent = 10;
+
+    string insurance_sn = 11;
+    string insurance_benificiary = 12;
+    string insurance_benificiary_identity = 13;
+    uint64 insurance_benificiary_identity_type = 14;
+    uint32 insurance_benificiary_sex = 15;
+    string insurance_benificiary_birth = 16;
+    uint64 insurance_begtime = 17;
+    uint64 insurance_endtime = 18;
+    string chn = 19;
+
+    uint64 renew_deal_id = 20;
+    uint64 renew_bdeal_id = 21;
+    string renew_disdeal_id = 22;
+    uint64 renew_uid = 23;
+    uint32 renew_pay_state = 24;
+    uint64 has_buy = 25;
+    uint64 buy_deal_id = 26;
+
+    uint32 touch_state = 27;
+    uint32 touch_times = 28;
+    string touch_time_1 = 29;
+    string touch_time_2 = 30;
+    string touch_time_3 = 31;
+    string touch_time_4 = 32;
+    string touch_time_5 = 33;
+
+    uint32  fit_renewal_plan_id = 34;
+    string fit_renewal_title = 35;
+
+    uint32 cooperator = 36;
+    string company_picurl = 37;
+    uint32 insurance_price = 38;
+    uint64 insurance_real_endtime = 39;
+
+    string modify_user = 40;
+    uint64 addtime = 41;
+    string mtime = 42;
+}

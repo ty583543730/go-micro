@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+
+package terry.proto.comment;
+
+
+message RequestHeader {
+    string chn = 1;
+}
+
+
+message ResponseHeader {
+    uint32 errorNo = 1;
+    string errorMsg = 2;
+
+}
+
+
+message CommentInfo {
+    uint64 commentId = 1;
+    uint64 userId = 2;
+    string userName = 3;
+    string commentText = 4;
+    uint64 stars = 5;
+    string fans = 6;
+    string addTime = 7;
+    string lastModifyTime = 8;
+    string chn = 9;
+}

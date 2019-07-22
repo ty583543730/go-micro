@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package daniel.proto.renewal;
+
+import "Common.proto";
+
+message GetRenewalRequest {
+    RequestHeader header = 1;
+    uint64 deal_id = 2;
+    bool realTime = 3;
+}
+
+message GetRenewalResponse {
+    ResponseHeader header = 1;
+    RenewalDealInfo dealInfo = 2;
+}
+
+
+service RenewalReadAo {
+    rpc GetRenewalDealInfo(GetRenewalRequest) returns (GetRenewalResponse) {}
+}

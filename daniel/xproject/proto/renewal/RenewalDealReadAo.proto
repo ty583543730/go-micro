@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package daniel.xproject.proto.renewal;
+
+import "Common.proto";
+
+service RenewalDealReadAoService {
+    rpc GetRenewalDealByDealId(RenewalDealId) returns (SingleRenewalDeal) {}
+}
+
+message RenewalDealId {
+    RequestHeader header = 1;
+    uint64 dealId = 2;
+    bool realTime = 3;
+}
+
+message SingleRenewalDeal {
+    ResponseHeader header = 1;
+    RenewalDealInfo renewalDealInfo = 2;
+}
+

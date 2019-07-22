@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package terry.proto.comment;
+
+import "Common.proto";
+
+message AddCommentRequest {
+    RequestHeader header = 1;
+      uint64 commentId = 2;
+      uint64 userId = 3;
+      string userName = 4;
+      string commentText = 5;
+      uint64 stars = 6;
+      string fans = 7;
+      string addTime = 8;
+}
+
+message AddCommentResponse {
+    ResponseHeader header = 1;
+}
+
+
+service CommentAddAo {
+    rpc AddCommentInfo(AddCommentRequest) returns (AddCommentResponse) {}
+}
